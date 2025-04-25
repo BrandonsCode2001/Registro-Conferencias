@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro – Conferencias UAM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="registro.html">Registro</a></li>
+      </ul>
+    </nav>
+    <img src="imag/logo-uam.png" alt="Logo UAM" class="logo">
+  </header>
+
+  <main>
+    <section class="registration">
+      <h1>Registro de Estudiantes</h1>
+      <form id="registration-form">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo institucional:</label>
+        <input type="email" id="email" name="email" placeholder="usuario@uamv.edu.ni" required />
+
+        <label for="carrera">Carrera:</label>
+        <select id="carrera" name="carrera" required>
+          <option value="">Seleccione su carrera</option>
+          <option value="Ingeniería en Sistemas de Información">Ingeniería en Sistemas de Información</option>
+          <option value="Odontología">Odontología</option>
+          <option value="Medicina">Medicina</option>
+          <option value="Negocios Internacionales">Negocios Internacionales</option>
+          <option value="Derecho">Derecho</option>
+          <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+          <option value="Arquitectura">Arquitectura</option>
+          <option value="Marketing y Publicidad">Marketing y Publicidad</option>
+        </select>
+
+        <fieldset>
+          <legend>Conferencias a asistir:</legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="conf1" name="conferencias" value="GitHub"> Uso de GitHub en proyectos colaborativos</label>
+            <label><input type="checkbox" id="conf2" name="conferencias" value="Docker"> Introducción a Docker para entornos de desarrollo</label>
+            <label><input type="checkbox" id="conf3" name="conferencias" value="Linux"> Configuración básica de servidores Linux</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Registrar</button>
+      </form>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p>¡Registro exitoso! Te hemos enviado una confirmación a tu correo.</p>
+        <button id="close-modal">Cerrar</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Universidad Americana - Brandon Aragón</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
